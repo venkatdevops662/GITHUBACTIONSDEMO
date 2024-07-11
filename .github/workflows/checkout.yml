@@ -7,5 +7,4 @@ jobs:
       - name: my-step
         run: echo "Hello World!"
       - uses: actions/checkout@v4
-        with:
-        ref: develop
+        
