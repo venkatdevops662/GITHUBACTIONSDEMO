@@ -12,4 +12,13 @@ jobs:
       - name: checkout the repo
         uses: actions/checkout@v4
       - name: Nexus Repo Publish
-        run: curl -v -k -u admin:admin --upload-file test.txt http://34.45.205.56:8081/devopsmvnhosted/Nexus_Deploy/test.txt
+        uses: sonatype-nexus-community/nexus-repo-github-action@master
+        with:
+         serverUrl: http://34.45.205.56:8081/
+         username: admin
+         password: admin
+         format: txt
+         repository: devopsmvnhosted
+         coordinates: artifactId=Nexus_Deploy
+         assets: filename=test.txt
+         filename: test.txt
