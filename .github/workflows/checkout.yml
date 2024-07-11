@@ -12,4 +12,4 @@ jobs:
       - name: checkout the repo
         uses: actions/checkout@v4
       - name: Nexus Repo Publish
-        run: curl -v -k -u admin -p admin  --upload-file test.txt http://34.45.205.56:8081/devopsmvnhosted/Nexus_Deploy/test.txt
+        run: curl -v -k -u admin:admin  --upload-file test.txt http://34.45.205.56:8081/devopsmvnhosted/Nexus_Deploy/test.txt
