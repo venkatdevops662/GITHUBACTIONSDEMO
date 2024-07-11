@@ -14,11 +14,12 @@ jobs:
       - name: Nexus Repo Publish
         uses: sonatype-nexus-community/nexus-repo-github-action@master
         with:
-        serverUrl: 34.171.80.38:8081
+        serverUrl: 34.171.80.38
+        port: 8081
         username: admin
         password: admin
         format: txt
         repository: devopsmvnhosted
-        coordinates: directory=nexus-repo-github-action-test-rawrepodir
-        assets: filename=test
-        filename: ./test
+        coordinates: artifactId='Nexus_Deploy'
+        assets: extension=txt
+        filename: test
