@@ -1,10 +1,9 @@
 name: GitCheckout
 'on': push
 jobs:
-  my-job:
+  checkout-job:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
         run: echo "Hello World!"
       - uses: actions/checkout@v4
-        
