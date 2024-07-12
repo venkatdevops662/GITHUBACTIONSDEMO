@@ -17,8 +17,8 @@ jobs:
          serverUrl: http://34.45.205.56:8081/
          username: admin
          password: admin
-         format: txt
+         format: sh
          repository: devopsmvnhosted
          coordinates: artifactId=Nexus_Deploy
-         assets: filename=test.txt
-         filename: test.txt
+         assets: filename=entrypoint.sh
+         filename: entrypoint.sh
