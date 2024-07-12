@@ -11,14 +11,10 @@ jobs:
      steps:
       - name: checkout the repo
         uses: actions/checkout@v4
-      - name: Nexus Repo Publish
+      - name: Deploying java 
         uses: sonatype-nexus-community/nexus-repo-github-action@master
-        with:
-         serverUrl: http://34.45.205.56:8081/
-         username: admin
-         password: admin
-         format: sh
-         repository: devopsmvnhosted
-         coordinates: artifactId=Nexus_Deploy
-         assets: filename=entrypoint.sh
-         filename: entrypoint.sh
+        run:  |
+              sudo apt install default-jdk -y
+              sudo apt install default-jre -y
+              java -version
+           
