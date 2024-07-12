@@ -12,7 +12,6 @@ jobs:
       - name: checkout the repo
         uses: actions/checkout@v4
       - name: Deploying java 
-        uses: sonatype-nexus-community/nexus-repo-github-action@master
         run:  |
               sudo apt install default-jdk -y
               sudo apt install default-jre -y
